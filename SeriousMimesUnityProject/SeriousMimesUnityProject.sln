@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeriousMimesUnityProject.CSharp.Plugins", "SeriousMimesUnityProject.CSharp.Plugins.csproj", "{A316FBCB-BFDB-0AD9-A092-21B0EE0D741D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeriousMimesUnityProject.CSharp.Editor", "SeriousMimesUnityProject.CSharp.Editor.csproj", "{157B10CF-9288-9214-C63A-85025D652C35}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A316FBCB-BFDB-0AD9-A092-21B0EE0D741D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A316FBCB-BFDB-0AD9-A092-21B0EE0D741D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A316FBCB-BFDB-0AD9-A092-21B0EE0D741D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A316FBCB-BFDB-0AD9-A092-21B0EE0D741D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{157B10CF-9288-9214-C63A-85025D652C35}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{157B10CF-9288-9214-C63A-85025D652C35}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{157B10CF-9288-9214-C63A-85025D652C35}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{157B10CF-9288-9214-C63A-85025D652C35}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
