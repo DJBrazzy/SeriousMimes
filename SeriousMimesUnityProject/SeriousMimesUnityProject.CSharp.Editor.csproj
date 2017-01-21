@@ -124,6 +124,10 @@
       <Project>{A316FBCB-BFDB-0AD9-A092-21B0EE0D741D}</Project>
       <Name>SeriousMimesUnityProject.CSharp.Plugins</Name>
     </ProjectReference>
+    <ProjectReference Include="SeriousMimesUnityProject.CSharp.csproj">
+      <Project>{427862DC-DC96-0AC6-99A6-D9282A4759D4}</Project>
+      <Name>SeriousMimesUnityProject.CSharp</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Editor\CrossPlatformInput\CrossPlatformInputInitialize.cs" />
