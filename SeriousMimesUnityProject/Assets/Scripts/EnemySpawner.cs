@@ -11,8 +11,6 @@ public class EnemySpawner : MonoBehaviour {
 
 	public float moveSpeed;
 
-
-
 	public int spawnIncrease;
 	public int spawnIncreaseInterval;
 	public float healthIncrease;
