@@ -91,6 +91,7 @@
      <Compile Include="Assets\Realistic Effects Pack\Scripts\Share\UVTextureAnimator.cs" />
      <Compile Include="Assets\Scripts\Beam.cs" />
      <Compile Include="Assets\Scripts\CameraFollowGuy.cs" />
+     <Compile Include="Assets\Scripts\CollisionBuddy.cs" />
      <Compile Include="Assets\Scripts\CustomCharacterController.cs" />
      <Compile Include="Assets\Scripts\EnemyBehaviour.cs" />
      <Compile Include="Assets\Scripts\EnemySpawner.cs" />
