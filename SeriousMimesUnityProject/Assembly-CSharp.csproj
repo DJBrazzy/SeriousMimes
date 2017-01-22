@@ -93,8 +93,10 @@
      <Compile Include="Assets\Scripts\CameraFollowGuy.cs" />
      <Compile Include="Assets\Scripts\CollisionBuddy.cs" />
      <Compile Include="Assets\Scripts\CustomCharacterController.cs" />
+     <Compile Include="Assets\Scripts\DefenseTurret.cs" />
      <Compile Include="Assets\Scripts\EnemyBehaviour.cs" />
      <Compile Include="Assets\Scripts\EnemySpawner.cs" />
+     <Compile Include="Assets\Scripts\ItemPickup.cs" />
      <Compile Include="Assets\Scripts\Patrol.cs" />
      <Compile Include="Assets\Scripts\SpawnMaster.cs" />
      <Compile Include="Assets\Scripts\WaveGun.cs" />

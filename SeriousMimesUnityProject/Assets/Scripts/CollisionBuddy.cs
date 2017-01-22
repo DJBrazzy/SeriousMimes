@@ -4,12 +4,14 @@ using System.Collections;
 public class CollisionBuddy : MonoBehaviour {
 
 	public Transform focusObject;
+	public WaveGun beamGun;
 	public CustomCharacterController controller;
 	public float stunTime;
 
 	public Renderer[] mainCharacterRender; 
 
 	private bool isRunning;
+	private ItemPickup crystal;
 	// Use this for initialization
 	void Start () {
 	
@@ -32,6 +34,22 @@ public class CollisionBuddy : MonoBehaviour {
 			}
 
 		}
+
+		if(collide.CompareTag("Item"))
+		{
+			crystal = collide.GetComponent<ItemPickup> ();
+
+			if (crystal.isLight)
+				beamGun.lightAmmo += crystal.ammoValue;
+
+			if (crystal.isWater)
+				beamGun.waterAmmo += crystal.ammoValue;
+
+			if (crystal.isWater)
+				beamGun.waterAmmo += crystal.ammoValue;
+
+			Destroy (collide.gameObject);
+		}
 	}
 
 	public IEnumerator Stunning()
@@ -41,7 +59,6 @@ public class CollisionBuddy : MonoBehaviour {
 		float timer = 0;
 
 		while (timer < stunTime) {
-			print ("joey");
 
 			timer += .2f;
 

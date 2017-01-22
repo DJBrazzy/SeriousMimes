@@ -68,43 +68,29 @@ public class EnemySpawner : MonoBehaviour {
 
 		if (nextWave) {
 
-			timer += Time.deltaTime;
+			nextWave = false;
+			timer = 0;
 
-			if(timer > nextWaveDelay) {
+			reductionTracker++;
+			spawnTracker++;
+			healthTracker++;
 
 
-				nextWave = false;
-				timer = 0;
 
+			if (spawnTracker == spawnIncreaseInterval) {
 
-				reductionTracker++;
-				spawnTracker++;
-				healthTracker++;
+				spawnMax += spawnIncrease;
+				spawnMin += spawnIncrease;
+				spawnTracker = 0;
+			}
 
-				if (reductionTracker == reductionInterval) {
+			if (healthTracker == healthIncreaseInterval) {
 
-					if ((nextWaveDelay - nextWaveReduction) > nextWaveDelayMin) {
-						nextWaveDelay -= nextWaveReduction;
+				healthIncrease += healthIncrease;
+				healthTracker = 0;
+			}
 
-						reductionTracker = 0;
-					}
-				}
-
-				if (spawnTracker == spawnIncreaseInterval) {
-
-					spawnMax += spawnIncrease;
-					spawnMin += spawnIncrease;
-					spawnTracker = 0;
-				}
-
-				if (healthTracker == healthIncreaseInterval) {
-
-					healthIncrease += healthIncrease;
-					healthTracker = 0;
-				}
-
-				StartCoroutine (Spawn ());
-			}	
+			StartCoroutine (Spawn ());	
 		}					
 	}
 

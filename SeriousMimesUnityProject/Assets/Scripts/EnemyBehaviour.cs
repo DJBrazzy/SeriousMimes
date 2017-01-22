@@ -26,6 +26,8 @@ public class EnemyBehaviour : MonoBehaviour {
 	// Use this for initialization
 	public void InitializeBehaviour () {
 
+		SpawnMaster.enemyCount++;
+
 		for (int x = 0; x < wayPoints.Count; x++) {
 			if (Random.Range (0, 2) == 0 && x < wayPoints.Count - 1) {
 
@@ -54,5 +56,10 @@ public class EnemyBehaviour : MonoBehaviour {
 			Destroy (gameObject);
 		}
 	
+	}
+
+	void OnDestroy()
+	{
+		SpawnMaster.enemyCount--;
 	}
 }
