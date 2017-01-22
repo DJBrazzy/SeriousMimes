@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: PlasmaShieldMat
+  m_Shader: {fileID: 4800000, guid: fdb7e96596117a842b8c17421a6b9b02, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: 13674
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _BumpMap
+      second:
+        m_Texture: {fileID: 2800000, guid: bc21d47730720a841942b219381cf102, type: 3}
+        m_Scale: {x: 3, y: 3}
+        m_Offset: {x: 0.28, y: 0.83}
+    - first:
+        name: _CutOut
+      second:
+        m_Texture: {fileID: 2800000, guid: ae04511446eea0a44b6319f367e38148, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _CutoutTex
+      second:
+        m_Texture: {fileID: 2800000, guid: 969fe4c0a05aa7548b2eb4c60af3707c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 2800000, guid: 93411440cabbd493e9d9b949ba3c82fd, type: 3}
+        m_Scale: {x: 3, y: 3}
+        m_Offset: {x: 0.91, y: -0.62}
+    m_Floats:
+    - first:
+        name: _BumpAmt
+      second: 30
+    - first:
+        name: _ColorStrength
+      second: 1.19
+    - first:
+        name: _DistortIllum
+      second: 1
+    - first:
+        name: _InvFade
+      second: 0.7
+    m_Colors:
+    - first:
+        name: _Color
+      second: {r: 0.36764705, g: 0.4766736, b: 1, a: 1}
+    - first:
+        name: _TintColor
+      second: {r: 0, g: 1, b: 1, a: 1}
