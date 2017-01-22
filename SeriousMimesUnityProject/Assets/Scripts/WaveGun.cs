@@ -8,6 +8,8 @@ public class WaveGun : MonoBehaviour {
 	public bool isLight;
 	public bool isSound = true;
 
+	public CustomCharacterController characterControl;
+
 	public GameObject waterHose;
 	public GameObject lightBeam;
 	public GameObject lightRenderer1;
@@ -40,10 +42,6 @@ public class WaveGun : MonoBehaviour {
 	public float reloadRate;
 	public float reloadThreshhold;
 
-	private bool isRunning;
-
-
-
 
 	// Use this for initialization
 	void Start () {
@@ -57,6 +55,10 @@ public class WaveGun : MonoBehaviour {
 		WaitForEndOfFrame waitEnd = new WaitForEndOfFrame ();
 
 		while (true) {
+
+			waterTimer += Time.deltaTime;
+			lightTimer += Time.deltaTime;
+			soundTimer += Time.deltaTime;
 
 			if (waterTimer > reloadWait && waterAmmo < reloadThreshhold ) {
 
@@ -81,7 +83,7 @@ public class WaveGun : MonoBehaviour {
 	void Update () {
 
 		//fire
-		if (Input.GetKey (KeyCode.Mouse0)) {
+		if (Input.GetKey (KeyCode.Mouse0) && !characterControl.isStunned) {
 			isFiring = true;
 
 			if (isWater && waterAmmo > 0) {
@@ -89,14 +91,18 @@ public class WaveGun : MonoBehaviour {
 
 				if (waterAmmo > 0) {
 					waterAmmo -= ammoDepletionRate * Time.deltaTime;
-				}
-				else {
+				} else {
 					if (waterAmmo < 0)
 						waterAmmo = 0;
 				}
 
 				characterGuy.moveSpeed = waterMoveSpeed;
 				mouseRotate.rotationSpeed = waterRotationSpeed;
+			} else {
+				if (waterAmmo <= 0) {
+					waterHose.SetActive (false);
+				}
+
 			}
 
 			if (isLight && lightAmmo > 0) {
@@ -112,6 +118,14 @@ public class WaveGun : MonoBehaviour {
 						lightAmmo = 0;
 				}
 				Invoke ("ChangeLightLayer", .5f);
+			} else {
+				if (lightAmmo <= 0) {
+					lightBeam.SetActive (false);
+					lightRenderer1.layer = 1;
+					lightRenderer2.layer = 1;
+					CancelInvoke ();
+				}
+
 			}
 
 			if (isSound && soundAmmo > 0) {
@@ -125,6 +139,11 @@ public class WaveGun : MonoBehaviour {
 						soundAmmo = 0;
 				}
 				characterGuy.moveSpeed = soundMoveSpeed;
+			} else {
+				if (soundAmmo <= 0) {
+					soundWave.SetActive (false);
+				}
+
 			}
 
 		} else {
@@ -169,8 +188,6 @@ public class WaveGun : MonoBehaviour {
 				switchCounter=0;
 
 		}
-
-	
 	}
 
 	public void ChangeLightLayer()

@@ -24,7 +24,7 @@ public class EnemyBehaviour : MonoBehaviour {
 	public bool killedWithElement;
 
 	// Use this for initialization
-	void Start () {
+	public void InitializeBehaviour () {
 
 		for (int x = 0; x < wayPoints.Count; x++) {
 			if (Random.Range (0, 2) == 0 && x < wayPoints.Count - 1) {

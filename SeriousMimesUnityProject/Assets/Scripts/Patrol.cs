@@ -9,8 +9,8 @@ public class Patrol : MonoBehaviour {
 	private int destPoint = 0;
 	private NavMeshAgent agent;
 
-
 	void Start () {
+
 		agent = GetComponent<NavMeshAgent>();
 
 		// Disabling auto-braking allows for continuous movement
