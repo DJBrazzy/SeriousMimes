@@ -60,17 +60,24 @@ public class WaveGun : MonoBehaviour {
 			lightTimer += Time.deltaTime;
 			soundTimer += Time.deltaTime;
 
-			if (waterTimer > reloadWait && waterAmmo < reloadThreshhold ) {
+			if (Input.GetKey (KeyCode.Mouse0)) {
+				waterTimer = 0;
+				lightTimer = 0;
+				soundTimer = 0;
+
+			}
+
+			if (waterTimer > reloadWait && waterAmmo < reloadThreshhold  && !Input.GetKey(KeyCode.Mouse0)) {
 
 				waterAmmo += reloadRate * Time.deltaTime;
 			}
 
-			if (lightTimer > reloadWait && lightAmmo < reloadThreshhold ) {
+			if (lightTimer > reloadWait && lightAmmo < reloadThreshhold && !Input.GetKey(KeyCode.Mouse0) ) {
 
 				lightAmmo += reloadRate * Time.deltaTime;
 			}
 
-			if (soundTimer > reloadWait && soundAmmo < reloadThreshhold ) {
+			if (soundTimer > reloadWait && soundAmmo < reloadThreshhold && !Input.GetKey(KeyCode.Mouse0) ) {
 
 				soundAmmo += reloadRate * Time.deltaTime;
 			}

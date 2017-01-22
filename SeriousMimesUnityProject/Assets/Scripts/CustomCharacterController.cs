@@ -12,12 +12,9 @@ public class CustomCharacterController : MonoBehaviour {
 	public Vector3 m_Move;
 	public float originalMoveSpeed;
 	public float moveSpeed;
-
 	public bool isStunned;
-	public float stunTime;
-	public Renderer[] mainCharacterRender; 
 
-	private bool isRunning;
+
 	// Use this for initialization
 	void Start () {
 		control = GetComponent<CharacterController> ();	
@@ -45,46 +42,5 @@ public class CustomCharacterController : MonoBehaviour {
 		}
 	}
 
-	public void OnCollisionEnter(Collision collide) 
-	{
-		print ("bop");
-		if (collide.gameObject.CompareTag ("Enemy")) {
 
-			isStunned = true;
-			print ("yessir");
-
-			if (!isRunning) {
-				StartCoroutine (Stunning ());
-				isRunning = true;
-			}
-
-		}
-	}
-
-	public IEnumerator Stunning()
-	{
-		WaitForSeconds waitEnd = new WaitForSeconds (.2f);
-
-		float timer = 0;
-
-		while (timer < stunTime) {
-
-			timer += .2f;
-
-			for (int x = 0; x < mainCharacterRender.Length; x++) {
-
-				mainCharacterRender [x].enabled = !mainCharacterRender [x].enabled;
-			}
-						
-			yield return waitEnd;
-		}
-
-		for (int x = 0; x < mainCharacterRender.Length; x++) {
-
-			mainCharacterRender [x].enabled = true;
-		}
-
-		isStunned = false;
-		isRunning = true;
-	}
 }
