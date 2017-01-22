@@ -4,7 +4,6 @@ using System.Collections.Generic;
 
 public class EnemySpawner : MonoBehaviour {
 
-
 	public List<Transform> wayPoints;
 
 	public Transform startPosition;
@@ -12,7 +11,7 @@ public class EnemySpawner : MonoBehaviour {
 
 	public float moveSpeed;
 
-	public int waveNum = 1;
+
 
 	public int spawnIncrease;
 	public int spawnIncreaseInterval;
@@ -77,7 +76,7 @@ public class EnemySpawner : MonoBehaviour {
 				nextWave = false;
 				timer = 0;
 
-				waveNum++;
+
 				reductionTracker++;
 				spawnTracker++;
 				healthTracker++;
