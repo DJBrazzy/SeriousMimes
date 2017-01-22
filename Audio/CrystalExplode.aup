@@ -1,0 +1,65 @@
+<?xml version="1.0" standalone="no" ?>
+<!DOCTYPE project PUBLIC "-//audacityproject-1.3.0//DTD//EN" "http://audacity.sourceforge.net/xml/audacityproject-1.3.0.dtd" >
+<project xmlns="http://audacity.sourceforge.net/xml/" projname="CrystalExplode_data" version="1.3.0" audacityversion="2.1.0" sel0="2.7509523810" sel1="3.7184504913" vpos="96" h="1.5680080992" zoom="540.1757812500" rate="44100.0" snapto="off" selectionformat="hh:mm:ss + milliseconds">
+	<tags/>
+	<wavetrack name="CrystalExplode" channel="0" linked="1" mute="0" solo="0" height="150" minimized="0" isSelected="0" rate="44100" gain="1.0" pan="0.0">
+		<waveclip offset="0.00000000">
+			<sequence maxsamples="524288" sampleformat="131073" numsamples="137890">
+				<waveblock start="0">
+					<simpleblockfile filename="e0000163.au" len="137890" min="-0.344666" max="0.354095" rms="0.014093"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="CrystalExplode" channel="1" linked="0" mute="0" solo="0" height="150" minimized="0" isSelected="0" rate="44100" gain="1.0" pan="0.0">
+		<waveclip offset="0.00000000">
+			<sequence maxsamples="524288" sampleformat="131073" numsamples="137890">
+				<waveblock start="0">
+					<simpleblockfile filename="e0000736.au" len="137890" min="-0.126892" max="0.151611" rms="0.008387"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="CrystalExplode" channel="0" linked="1" mute="0" solo="0" height="150" minimized="0" isSelected="0" rate="44100" gain="1.0" pan="0.0">
+		<waveclip offset="2.57511573">
+			<sequence maxsamples="524288" sampleformat="131073" numsamples="63750">
+				<waveblock start="0">
+					<simpleblockfile filename="e0000dd8.au" len="63750" min="-0.584229" max="0.707214" rms="0.165988"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="CrystalExplode" channel="1" linked="0" mute="0" solo="0" height="150" minimized="0" isSelected="0" rate="44100" gain="1.0" pan="0.0">
+		<waveclip offset="2.57511573">
+			<sequence maxsamples="524288" sampleformat="131073" numsamples="63750">
+				<waveblock start="0">
+					<simpleblockfile filename="e00008ea.au" len="63750" min="-0.393341" max="0.405334" rms="0.10238"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="CrystalExplode" channel="0" linked="1" mute="0" solo="0" height="150" minimized="0" isSelected="1" rate="44100" gain="1.0" pan="0.0">
+		<waveclip offset="2.75095238">
+			<sequence maxsamples="524288" sampleformat="131073" numsamples="42667">
+				<waveblock start="0">
+					<simpleblockfile filename="e00007e3.au" len="42667" min="-0.395081" max="0.387512" rms="0.027422"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="CrystalExplode" channel="1" linked="0" mute="0" solo="0" height="150" minimized="0" isSelected="1" rate="44100" gain="1.0" pan="0.0">
+		<waveclip offset="2.75095238">
+			<sequence maxsamples="524288" sampleformat="131073" numsamples="42667">
+				<waveblock start="0">
+					<simpleblockfile filename="e0000efd.au" len="42667" min="-0.2612" max="0.344208" rms="0.018036"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+</project>
