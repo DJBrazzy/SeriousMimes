@@ -96,6 +96,7 @@
      <Compile Include="Assets\Scripts\EnemyBehaviour.cs" />
      <Compile Include="Assets\Scripts\EnemySpawner.cs" />
      <Compile Include="Assets\Scripts\Patrol.cs" />
+     <Compile Include="Assets\Scripts\SpawnMaster.cs" />
      <Compile Include="Assets\Scripts\WaveGun.cs" />
      <None Include="Assets\Realistic Effects Pack\Shaders\IceVert.shader" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
